@@ -15,7 +15,11 @@ module.exports = (bot, msg) => {
 		
 		if(!codes.includes(command) && !bot.commands.has(command)) return;
 		cmd = codes[codes.indexOf(command)] || bot.commands.get(command)
-		console.log(cmd)
+		if(!isNaN(parseInt(command))) {
+			console.log(cmd)
+		} else {
+			cmd.run(bot, msg, args)
+		}
 	} catch(err) {
 		console.error(err)
 	}
