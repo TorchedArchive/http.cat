@@ -10,7 +10,7 @@ module.exports = (bot, msg) => {
 	const args = msg.content.slice(prefix.length).trim().split(" ")
 	const command = args.shift().toLowerCase()
 	try {
-		const codes = ["200"]
+		const { codes } = require("../codes.json")
 		let cmd;
 		
 		if(!codes.includes(command) && !bot.commands.has(command)) return;
