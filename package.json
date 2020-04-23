@@ -24,6 +24,7 @@
   "homepage": "https://github.com/TorchedSammy/http.cat#readme",
   "dependencies": {
     "bufferutil": "^4.0.1",
+    "dotenv": "^8.2.0",
     "eris": "^0.12.0",
     "eventemitter3": "^4.0.0"
   }
