@@ -1,0 +1,30 @@
+{
+  "name": "http.cat",
+  "version": "1.0.0",
+  "description": "A Discord bot to show all http.cat images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TorchedSammy/http.cat.git"
+  },
+  "keywords": [
+    "cat",
+    "image",
+    "discord",
+    "bot"
+  ],
+  "author": "TorchedSammy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TorchedSammy/http.cat/issues"
+  },
+  "homepage": "https://github.com/TorchedSammy/http.cat#readme",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "eris": "^0.12.0",
+    "eventemitter3": "^4.0.0"
+  }
+}
