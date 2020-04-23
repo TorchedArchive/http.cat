@@ -2,6 +2,8 @@ const Eris = require("eris")
 require("dotenv").config()
 const bot = new Eris(process.env.TOKEN)
 
+bot.commands = new Map()
+
 try {
 	let files = require("fs").readdirSync("./events").filter(f => f.split(".").pop() === "js")
 	if(files.length === 0) {
