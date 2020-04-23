@@ -15,8 +15,13 @@ module.exports = (bot, msg) => {
 		
 		if(!codes.includes(command) && !bot.commands.has(command)) return;
 		cmd = codes[codes.indexOf(command)] || bot.commands.get(command)
-		if(!isNaN(parseInt(command))) {
-			console.log(cmd)
+		if(!isNaN(parseInt(cmd))) {
+			msg.channel.createMessage({embed: {
+				color: 0x38B1D0,
+				image: {
+					url: `https://http.cat/${command}.jpg`
+				}
+			}})
 		} else {
 			cmd.run(bot, msg, args)
 		}
