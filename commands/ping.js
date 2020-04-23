@@ -3,5 +3,6 @@ exports.run = (bot, msg) => {
 }
 
 exports.info = {
-	name: "ping"
+	name: "ping",
+	description: "See the bot response time."
 }

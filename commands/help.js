@@ -1,4 +1,4 @@
-exports.run = (bot, msg, args) => {
+exports.run = (bot, msg) => {
 	const dev = bot.users.get("439373663905513473")
 	msg.channel.createMessage({embed: {
 		color: 0x38B1D0,
@@ -18,5 +18,6 @@ exports.run = (bot, msg, args) => {
 }
 
 exports.info = {
-	name: "help"
+	name: "help",
+	description: "See some help and info about the bot."
 }
