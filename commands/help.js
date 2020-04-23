@@ -1,10 +1,19 @@
 exports.run = (bot, msg, args) => {
+	const dev = bot.users.get("439373663905513473")
 	msg.channel.createMessage({embed: {
 		color: 0x38B1D0,
 		thumbnail: {
 			url: bot.user.avatarURL.replace("128", "512").replace("jpg", "png")
 		},
-		description: "[http.cat](https://http.cat) is a site to look at HTTP codes with cat images, and the bot provides you with exactly that also.\nIf you want a command list, run `http.cat commands` and if you want to see a code run `http.cat <code>`."
+		description: `[http.cat](https://http.cat) is a site to look at HTTP codes with cat images, and this bot shows you exactly that.
+		To get started using it, you can run \`http.cat 200\` as an example. The format is \`http.cat <code>\` and works with any HTTP code.
+
+		And to look at the other commands I have, you can run \`http.cat commands\` for a list of them.`,
+		footer: {
+			icon_url: msg.author.avatarURL,
+			text: `Requested by ${msg.author.username}#${msg.author.discriminator} \nImages from https://http.cat and bot by ${dev.username}#${dev.discriminator}`
+		},
+		timestamp: new Date()
 	}})
 }
 
