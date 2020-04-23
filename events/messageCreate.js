@@ -15,11 +15,11 @@ module.exports = (bot, msg) => {
 		
 		if(!codes.includes(command) && !bot.commands.has(command)) return;
 		cmd = codes[codes.indexOf(command)] || bot.commands.get(command)
-		if(!isNaN(parseInt(cmd))) {
+		if(codes.includes(command)) {
 			msg.channel.createMessage({embed: {
 				color: 0x38B1D0,
 				image: {
-					url: `https://http.cat/${command}.jpg`
+					url: `https://http.cat/${cmd === "random" ? codes[Math.floor(Math.random() * codes.length)] : cmd}.jpg`
 				}
 			}})
 		} else {
